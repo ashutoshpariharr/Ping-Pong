@@ -29,12 +29,15 @@ while is_update:
     ball.move()
     time.sleep(ball.move_speed)
 
+    # Find a ball cordinate
     if ball.ycor() > 270 or ball.ycor() < -270:
         ball.bounce_y()
 
+    # Find the distance between ball and paddel
     if ball.distance(r_paddel) < 50 and ball.xcor() > 320 or ball.distance(l_paddel) < 50 and ball.xcor() < -320:
         ball.bounce_x()
 
+    # Paddel and ball distance.
     if ball.xcor() > 380:
         ball.reset_position()
         score_bord.l_point()

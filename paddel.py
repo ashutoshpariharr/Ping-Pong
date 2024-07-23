@@ -2,6 +2,7 @@ from turtle import Turtle, Screen
 
 screen = Screen()
 
+
 class Paddel(Turtle):
 
     def __init__(self, position):
@@ -19,5 +20,3 @@ class Paddel(Turtle):
     def set_down(self):
         y_cor = self.ycor() - 20
         self.goto(self.xcor(), y_cor)
-
-
